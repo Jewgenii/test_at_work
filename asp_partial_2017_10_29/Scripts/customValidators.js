@@ -1,4 +1,5 @@
-﻿
+﻿/// <reference path="jquery.validate.js" />
+/// <reference path="jquery.validate.unobtrusive.js" />
 
 $.validator.unobtrusive.adapters.addSingleVal("maxwordssingle", "wordcount")
 $.validator.addMethod("maxwordssingle", function (value, element, maxwords) {
@@ -10,16 +11,16 @@ $.validator.addMethod("maxwordssingle", function (value, element, maxwords) {
     return true;
 })
 
+//add doesnt  work causing exceptions
+$.validator.unobtrusive.adapters.addSingleVal("maxwordscustom", "words")
+$.validator.addMethod("maxwordscustom", function (value, element, maxwordscustom) {
 
-$.validator.unobtrusive.adapters.add("maxwordscustom", "words")
-$.validator.addMethod("maxwordscustom", function (value, element, words) {
+    console.log(maxwordscustom);
 
-    console.log(words);
+    var len = value.split(' ').length;
 
-    var len = +value.split(' ').length;
-
-    var min = +words.split(' ')[0];
-    var max = +words.split(' ')[1];
+    var min = maxwordscustom.split(',')[0];
+    var max = maxwordscustom.split(',')[1];
  
     console.log(min);
     console.log(max);

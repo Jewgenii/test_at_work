@@ -24,6 +24,7 @@ namespace asp_partial_2017_10_29.Models
             rule.ErrorMessage = FormatErrorMessage(metadata.GetDisplayName());
 
             string s = string.Format("{0},{1}", MinWords, MaxWords);
+
             rule.ValidationParameters.Add("words", s);
             rule.ValidationType = "maxwordscustom";
 
