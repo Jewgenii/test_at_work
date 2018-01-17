@@ -53,6 +53,10 @@
             </div>
         </div>
     </div>
+
+    <div id="test">
+
+    </div>
 }
 
 <div>
@@ -63,6 +67,23 @@
 
     @*@Scripts.Render("~/bundles/jqueryval")*@
 
+    @Scripts.Render("~/bundles/jquaryui")
+
     <script src="~/Scripts/customValidators.js" type="text/javascript"> </script>
+    <script src="~/Scripts/mustache.js"></script>
+
+    <script> 
+        $(document).ready(
+
+            $("#test").on("mouseover", function () {
+
+                $(this).effect("bounce");
+
+            })
+
+
+        )
+        
+    </script>
 
 }

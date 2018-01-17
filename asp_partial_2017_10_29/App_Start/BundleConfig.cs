@@ -35,6 +35,9 @@ namespace asp_partial_2017_10_29
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
+
+            bundles.Add(new ScriptBundle("~/bundles/jquaryui")
+                .Include("~/Scripts/jqeury-ui-{version}.js"));
         }
     }
 }

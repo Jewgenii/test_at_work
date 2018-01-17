@@ -118,6 +118,12 @@ namespace asp_partial_2017_10_29.Controllers
             return RedirectToAction("Index");
         }
 
+        public JsonResult AutoComplete(string term)
+        {
+
+            return Json((new string[] { "hello", "hi", "host" }).Where(x=>x.Contains(s)).ToArray(),JsonRequestBehavior.AllowGet);
+        }
+
         protected override void Dispose(bool disposing)
         {
             if (disposing)
