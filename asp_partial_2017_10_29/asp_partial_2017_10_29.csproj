@@ -179,7 +179,7 @@
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Validation\MaxWordsSingleValidator.cs" />
-    <Compile Include="Models\Validation\MaxWordsValidator.cs" />
+    <Compile Include="Models\Validation\MaxWordsCustomValidator.cs" />
     <Compile Include="Models\dbInitializer.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />

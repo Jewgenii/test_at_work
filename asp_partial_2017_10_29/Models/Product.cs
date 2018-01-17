@@ -14,6 +14,7 @@ namespace asp_partial_2017_10_29.Models
         //[Required]
         //[StringLength(maximumLength: 10)]
         //[Display(Order =1,Name ="Name")]
+        [MaxWordsCustomValidator(MaxWords:4,MinWords:2)]
         public string Name { get; set; }
 
         //[RegularExpression(pattern:@"[A-Z]",ErrorMessage ="type capital letters")]
