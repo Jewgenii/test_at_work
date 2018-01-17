@@ -18,6 +18,7 @@ namespace asp_partial_2017_10_29
     {
         public Task SendAsync(IdentityMessage message)
         {
+           
             // Подключите здесь службу электронной почты для отправки сообщения электронной почты.
             return Task.FromResult(0);
         }
@@ -51,14 +52,14 @@ namespace asp_partial_2017_10_29
             };
 
             // Настройка логики проверки паролей
-            manager.PasswordValidator = new PasswordValidator
-            {
-                RequiredLength = 6,
-                RequireNonLetterOrDigit = true,
-                RequireDigit = true,
-                RequireLowercase = true,
-                RequireUppercase = true,
-            };
+            //manager.PasswordValidator = new PasswordValidator
+            //{
+            //    RequiredLength = 6,
+            //    RequireNonLetterOrDigit = true,
+            //    RequireDigit = true,
+            //    RequireLowercase = true,
+            //    RequireUppercase = true,
+            //};
 
             // Настройка параметров блокировки по умолчанию
             manager.UserLockoutEnabledByDefault = true;

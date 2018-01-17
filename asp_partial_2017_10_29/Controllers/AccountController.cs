@@ -12,7 +12,7 @@ using asp_partial_2017_10_29.Models;
 
 namespace asp_partial_2017_10_29.Controllers
 {
-    [Authorize]
+    [Authorize(Roles ="",Users ="")]
     public class AccountController : Controller
     {
         private ApplicationSignInManager _signInManager;

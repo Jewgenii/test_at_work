@@ -30,4 +30,5 @@ namespace asp_partial_2017_10_29.Models
             return new ApplicationDbContext();
         }
     }
+
 }
