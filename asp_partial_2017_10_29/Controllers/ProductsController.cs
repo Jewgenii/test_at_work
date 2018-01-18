@@ -36,11 +36,11 @@ namespace asp_partial_2017_10_29.Controllers
             }
             return View(product);
         }
-        
+
         // GET: Products/Create
         public ActionResult Create()
         {
-          
+
             return View();
         }
 
@@ -93,7 +93,7 @@ namespace asp_partial_2017_10_29.Controllers
         }
 
         // GET: Products/Delete/5
-        public ActionResult Delete( int? id)
+        public ActionResult Delete(int? id)
         {
             if (id == null)
             {
@@ -118,10 +118,25 @@ namespace asp_partial_2017_10_29.Controllers
             return RedirectToAction("Index");
         }
 
-        public JsonResult AutoComplete(string term)
+        // for jquery validation plugin
+        public JsonResult AutoComplete([Bind(Include ="term")] string term)
         {
+            var coll = (new string[] { "hello", "hi", "host" })
+                                                                .Where(x => x.Contains(term))
+                                                                .Select(x => new { value = x, label = "labled " + x })
+                                                                .ToArray();
+            return Json(coll, JsonRequestBehavior.AllowGet);
+        }
 
-            return Json((new string[] { "hello", "hi", "host" }).Where(x=>x.Contains(s)).ToArray(),JsonRequestBehavior.AllowGet);
+        public JsonResult CollectionTestValuesJson(string q)
+        {
+            var set = new string[] { "aaa", "bbb", "ccc" }.Where(x => x.Contains(q)).ToArray();
+            return Json(set,behavior:JsonRequestBehavior.AllowGet);
+        }
+        
+        public ActionResult AutoCompleteNoJson(string q)
+        {
+            return PartialView(q);
         }
 
         protected override void Dispose(bool disposing)

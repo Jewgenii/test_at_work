@@ -7,7 +7,6 @@ $.validator.addMethod("maxwordssingle", function (value, element, maxwords) {
     if (value.split(' ').length > maxwords) {
         return false;
     }
-
     return true;
 })
 
@@ -15,17 +14,19 @@ $.validator.addMethod("maxwordssingle", function (value, element, maxwords) {
 $.validator.unobtrusive.adapters.addSingleVal("maxwordscustom", "words")
 $.validator.addMethod("maxwordscustom", function (value, element, maxwordscustom) {
 
-    console.log(maxwordscustom);
+    var len = +value.trim().split(' ').length;
 
-    var len = value.split(' ').length;
+    console.log(len + " " + "length");
 
-    var min = maxwordscustom.split(',')[0];
-    var max = maxwordscustom.split(',')[1];
- 
-    console.log(min);
-    console.log(max);
+    var min = +maxwordscustom.split(',')[0];
+    
+    var max = +maxwordscustom.split(',')[1];
 
-    if (len > min || len < max) {
+    console.log(min + " " + typeof min);
+    console.log(max + " " + typeof max);
+
+
+    if (len < min || len > max) {
         return false;
     }
 

@@ -34,10 +34,10 @@ namespace asp_partial_2017_10_29
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
-                      "~/Content/site.css"));
+                      "~/Content/site.css").IncludeDirectory("~/Content/themes/base","*.css"));
 
-            bundles.Add(new ScriptBundle("~/bundles/jquaryui")
-                .Include("~/Scripts/jqeury-ui-{version}.js"));
+            bundles.Add(new ScriptBundle("~/bundles/jqueryui")
+                .Include("~/Scripts/jquery-ui-{version}.js"));
         }
     }
 }

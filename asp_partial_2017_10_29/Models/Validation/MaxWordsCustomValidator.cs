@@ -9,6 +9,7 @@ namespace asp_partial_2017_10_29.Models
 {
     public class MaxWordsCustomValidator :ValidationAttribute,IClientValidatable
     {
+        // set default message 
         public MaxWordsCustomValidator(int MaxWords, int MinWords=0) :base(()=>"{0} has too many words, more than " +
                                                             MaxWords + (MinWords!=0?"and not less than "+ MinWords : ""))
         {
@@ -53,6 +54,5 @@ namespace asp_partial_2017_10_29.Models
             return ValidationResult.Success;
         }
     }
-
 
 }
