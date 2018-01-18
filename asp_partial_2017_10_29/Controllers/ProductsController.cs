@@ -11,6 +11,7 @@ using asp_partial_2017_10_29.Models;
 namespace asp_partial_2017_10_29.Controllers
 {
     [Authorize]
+    [Route("Products/{action}")]
     public class ProductsController : Controller
     {
         private DBContext db = new DBContext();

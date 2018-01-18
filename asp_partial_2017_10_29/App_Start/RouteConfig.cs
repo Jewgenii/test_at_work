@@ -23,6 +23,9 @@ namespace asp_partial_2017_10_29
             //    url: "{controller}/{action}/{param1}/{param2}"
             //    );
 
+            routes.MapMvcAttributeRoutes();
+            
+
 
         }
     }
