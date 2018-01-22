@@ -141,9 +141,9 @@ namespace asp_partial_2017_10_29.Controllers.Areas.local
         }
         //test routing
         //[Route("testroute/{str:int}")]
-        public string testRoute(int str)
+        public string testRoute(string str)
         {
-            return str.ToString();
+            return str;
         }
 
         protected override void Dispose(bool disposing)

@@ -16,7 +16,7 @@ namespace asp_partial_2017_10_29.Areas.local
         {
             context.MapRoute(
                 "local_default",
-                "Prods/{str}",
+                "Prods-{str}",
                 new { controller = "products", action = "testRoute"}
             );
         }
