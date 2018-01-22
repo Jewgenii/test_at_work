@@ -38,6 +38,9 @@ namespace asp_partial_2017_10_29
 
             bundles.Add(new ScriptBundle("~/bundles/jqueryui")
                 .Include("~/Scripts/jquery-ui-{version}.js"));
+
+            bundles.Add(new ScriptBundle("~/bundles/test")
+                .Include("~/Scripts/test.js"));
         }
     }
 }

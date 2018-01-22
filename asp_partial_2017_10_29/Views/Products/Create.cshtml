@@ -82,7 +82,10 @@
 
     @Scripts.Render("~/bundles/jqueryui")
 
-    <script src="~/Scripts/customValidators.js" type="text/javascript"> </script>
+    @*<script src=@System.Web.Optimization.BundleTable.Bundles.ResolveBundleUrl("~/Scripts/customValid",includeContentHash:false) type="text/javascript"> </script>*@
+    
+    <script src=@Url.Content("~/Scripts/test") type="text/javascript"></script>
+
     <script src="~/Scripts/mustache.js"></script>
     
     <script> 
@@ -108,21 +111,21 @@
     <script type="text/javascript">
         $("#SearchForm").submit(function (event) {
             event.preventDefault();
-
+            console.log($(this).find("input").first().val());
             var form = $(this);
             //$("#SearchResults").load(form.attr("action") ,form.serialize());
             $("#SearchResults").load(form.attr("action"));
         })
     </script>
 
-    <script type="text/javascript">
+    @*<script type="text/javascript">
         $("#SearchForm").submit(function (event) {
             event.preventDefault();
 
             var form = $(this);
             $.getJSON(form.attr("action"),form.serialize(), );
         })
-    </script>
+    </script>*@
 
     <script id="jsonScriptConverter" type="text/html">
 

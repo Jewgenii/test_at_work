@@ -10,8 +10,10 @@ using asp_partial_2017_10_29.Models;
 
 namespace asp_partial_2017_10_29.Controllers
 {
-    [Authorize]
-    [Route("Products/{action}")]
+    //[Authorize]
+    
+    [RoutePrefix("Products")]
+    [Route("{action=Index}/{id?}")]
     public class ProductsController : Controller
     {
         private DBContext db = new DBContext();
@@ -135,9 +137,15 @@ namespace asp_partial_2017_10_29.Controllers
             return Json(set,behavior:JsonRequestBehavior.AllowGet);
         }
         
-        public ActionResult AutoCompleteNoJson(string q)
+        public ActionResult AutoCompleteNoJson(string id)
         {
-            return PartialView(q);
+            return PartialView(model:id);
+        }
+        //test routing
+        //[Route("testroute/{str:int}")]
+        public string testRoute(int str)
+        {
+            return str.ToString();
         }
 
         protected override void Dispose(bool disposing)

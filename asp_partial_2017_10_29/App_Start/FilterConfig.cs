@@ -9,6 +9,7 @@ namespace asp_partial_2017_10_29
         {
             filters.Add(new HandleErrorAttribute());
            //filters.Add(new AuthorizeAttribute()); // applies attribute to all controllers
+          
         }
     }
 }

@@ -18,14 +18,13 @@ namespace asp_partial_2017_10_29
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
+
             //routes.MapRoute(
             //    name: "test",
             //    url: "{controller}/{action}/{param1}/{param2}"
             //    );
 
-            routes.MapMvcAttributeRoutes();
-            
-
+            //routes.MapMvcAttributeRoutes();
 
         }
     }

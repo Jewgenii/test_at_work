@@ -10,7 +10,9 @@ using System.Web.Security;
 
 namespace asp_partial_2017_10_29.Controllers
 {
-    [Authorize]
+    //[Authorize]
+    [RoutePrefix("home")]
+    [Route("{action}")]
     public class HomeController : Controller
     {
         ApplicationDbContext con = new ApplicationDbContext();
@@ -27,8 +29,10 @@ namespace asp_partial_2017_10_29.Controllers
             return View();
         }
 
-       // [AllowAnonymous]
+        // [AllowAnonymous]
+        [Route("~/")] // escape prefix value with ~ operator
         [Route("")]
+        [Route("index")]
         public ActionResult Index()
         {
              
@@ -41,7 +45,6 @@ namespace asp_partial_2017_10_29.Controllers
 
             //User.Identity.Name
             
-
             var userID = User.Identity.GetUserId();
 
             return View();
@@ -53,12 +56,11 @@ namespace asp_partial_2017_10_29.Controllers
 
             return View();
         }
-
-        // [Route(Name = "test")]
-        //[HttpGet("",""]
-        public string Test(string param1,string param2)
+        [Route("~/test/{param1}/{param2}")]
+        [Route("test/{param1}/{param2}")]
+        public ActionResult Test(string param1,string param2)
         {
-            return param1 + param2;
+            return Content( param1 + param2);
         }
 
         protected override void Dispose(bool disposing)
