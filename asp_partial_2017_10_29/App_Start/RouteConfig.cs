@@ -11,20 +11,34 @@ namespace asp_partial_2017_10_29
     {
         public static void RegisterRoutes(RouteCollection routes)
         {
+
+          
+
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+            routes.MapRoute(
+            name: "test",
+            url: "{param1}-{param2}",
+            defaults: new { controller = "Home", action = "Test"}
+            );
+            
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
 
-            //routes.MapRoute(
-            //    name: "test",
-            //    url: "{controller}/{action}/{param1}/{param2}"
-            //    );
+            routes.MapRoute(
+                name: "lanc",
+                url: "sprache-{language}:{country}",
+                defaults: new { controller = "home", action = "lanc" }
+                );
 
-            //routes.MapMvcAttributeRoutes();
+       
+
+        
+
+           
 
         }
     }

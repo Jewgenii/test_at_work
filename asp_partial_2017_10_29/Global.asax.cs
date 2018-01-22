@@ -12,9 +12,12 @@ namespace asp_partial_2017_10_29
     {
         protected void Application_Start()
         {
+            RouteTable.Routes.MapMvcAttributeRoutes();
+
             AreaRegistration.RegisterAllAreas();
-            FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
+
+            FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
         }
     }

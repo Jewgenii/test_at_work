@@ -171,6 +171,8 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Areas\local\Controllers\ProductsController.cs" />
+    <Compile Include="Areas\local\localAreaRegistration.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\CheckController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -203,6 +205,7 @@
     <Content Include="App_Data\Identity-database_log.ldf">
       <DependentUpon>Identity-database.mdf</DependentUpon>
     </Content>
+    <Content Include="Areas\local\Views\web.config" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\themes\base\accordion.css" />
@@ -326,6 +329,8 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Areas\local\Models\" />
+    <Folder Include="Areas\local\Views\Shared\" />
     <Folder Include="images\" />
     <Folder Include="Views\Check\" />
   </ItemGroup>

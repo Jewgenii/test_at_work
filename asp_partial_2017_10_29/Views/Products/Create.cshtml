@@ -59,7 +59,7 @@
     </div>
 
     <div>
-        <input type="text" data-autocomplete-source='@Url.Action("AutoComplete")'/>
+        <input type="text" data-autocomplete-source='@Url.Action("AutoComplete")' />
     </div>
 }
 
@@ -69,12 +69,13 @@
 
 
 <form method="get" action='@Url.Action("AutoCompleteNoJson")' id="SearchForm">
-    <input type="text" name="q"/>
-    <input type="submit" value="Submit"/>
+    <input type="text" name="q" />
+    <input type="submit" value="Submit" />
 </form>
 
 <div id="SearchResults"> Empty </div>
 
+@Html.RouteLink(linkText: "link to testparams",routeName: "test",routeValues: new { param1 = "1", param2 = "2" })
 
 @section scripts{
 
@@ -82,13 +83,16 @@
 
     @Scripts.Render("~/bundles/jqueryui")
 
-    @*<script src=@System.Web.Optimization.BundleTable.Bundles.ResolveBundleUrl("~/Scripts/customValid",includeContentHash:false) type="text/javascript"> </script>*@
-    
-    <script src=@Url.Content("~/Scripts/test") type="text/javascript"></script>
+    <script src=@System.Web.Optimization.BundleTable.Bundles.ResolveBundleUrl("~/bundles/test",includeContentHash:true) type="text/javascript"></script>
+
+    @*@Scripts.Render(System.Web.Optimization.BundleTable.Bundles.ResolveBundleUrl("~/bundles/test",true))*@
+
+    @*< script src=@Url.Content("~/bundles/test") type="text/javascript"></script>*@
 
     <script src="~/Scripts/mustache.js"></script>
-    
-    <script> 
+
+
+    <script>
 
         $(document).ready(
 
@@ -105,7 +109,7 @@
                 });
             }) //autocomplete feature
         )
-        
+
     </script>
 
     <script type="text/javascript">
@@ -119,13 +123,13 @@
     </script>
 
     @*<script type="text/javascript">
-        $("#SearchForm").submit(function (event) {
-            event.preventDefault();
+            $("#SearchForm").submit(function (event) {
+                event.preventDefault();
 
-            var form = $(this);
-            $.getJSON(form.attr("action"),form.serialize(), );
-        })
-    </script>*@
+                var form = $(this);
+                $.getJSON(form.attr("action"),form.serialize(), );
+            })
+        </script>*@
 
     <script id="jsonScriptConverter" type="text/html">
 
