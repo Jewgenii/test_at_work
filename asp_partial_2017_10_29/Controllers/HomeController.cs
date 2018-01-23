@@ -24,7 +24,7 @@ namespace asp_partial_2017_10_29.Controllers
             //SelectList prods = new SelectList(db.Products, "Id", "Name");
             //ViewBag.Prods = prods;
 
-            ApplicationUser user = con.Users.FirstOrDefault();
+            //ApplicationUser user = con.Users.FirstOrDefault();
 
             return View();
         }
@@ -56,6 +56,7 @@ namespace asp_partial_2017_10_29.Controllers
 
             return View();
         }
+
         //[Route("~/test/{param1}/{param2}")]
         //[Route("test/{param1}/{param2}")]
         //[Route(Name = "test")]

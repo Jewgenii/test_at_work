@@ -8,7 +8,7 @@ using System.Web;
 using System.Web.Mvc;
 using asp_partial_2017_10_29.Models;
 
-namespace asp_partial_2017_10_29.Controllers.Areas.local
+namespace asp_partial_2017_10_29.Areas.local.Controllers
 {
     //[Authorize]
    

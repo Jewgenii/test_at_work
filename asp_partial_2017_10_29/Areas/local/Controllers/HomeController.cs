@@ -8,7 +8,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Security;
 
-namespace asp_partial_2017_10_29.Controllers
+namespace asp_partial_2017_10_29.Areas.local.Controllers
 {
     //[Authorize]
     //[RoutePrefix("home")]

@@ -269,6 +269,7 @@
     <Content Include="Areas\local\Views\Home\Contact.cshtml" />
     <Content Include="Areas\local\Views\Home\Index.cshtml" />
     <Content Include="Areas\local\Views\Home\Show.cshtml" />
+    <Content Include="Areas\local\Views\_ViewStart.cshtml" />
     <None Include="Scripts\jquery-3.2.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.2.1.js" />
     <Content Include="Scripts\jquery-3.2.1.min.js" />
