@@ -139,8 +139,7 @@ namespace asp_partial_2017_10_29.Controllers.Areas.local
         {
             return PartialView(model:id);
         }
-        //test routing
-        //[Route("testroute/{str:int}")]
+ 
         public string testRoute(string str)
         {
             return str;

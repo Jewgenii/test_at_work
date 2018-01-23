@@ -19,6 +19,7 @@ namespace asp_partial_2017_10_29
             // manually added
             bundles.Add(new ScriptBundle("~/bundles/jqueryajax").Include(
                         "~/Scripts/jquery.unobtrusive*"));
+         
 
             #endregion
 

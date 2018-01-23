@@ -256,6 +256,14 @@
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\customValidators.js" />
+    <Content Include="Areas\local\Views\Products\AutoCompleteNoJson.cshtml" />
+    <Content Include="Areas\local\Views\Products\Create.cshtml" />
+    <Content Include="Areas\local\Views\Products\Delete.cshtml" />
+    <Content Include="Areas\local\Views\Products\Details.cshtml" />
+    <Content Include="Areas\local\Views\Products\Edit.cshtml" />
+    <Content Include="Areas\local\Views\Products\Index.cshtml" />
+    <Content Include="Areas\local\Views\Products\ProductList.cshtml" />
+    <Content Include="Areas\local\Views\Products\Show.cshtml" />
     <None Include="Scripts\jquery-3.2.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.2.1.js" />
     <Content Include="Scripts\jquery-3.2.1.min.js" />
