@@ -11,6 +11,9 @@ namespace asp_partial_2017_10_29
     {
         public static void RegisterRoutes(RouteCollection routes)
         {
+            //routes.Add( new Route("", new StopRoutingHandler())
+            //    );
+
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute(

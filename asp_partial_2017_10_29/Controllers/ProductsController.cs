@@ -17,7 +17,7 @@ namespace asp_partial_2017_10_29.Controllers
     public class ProductsController : Controller
     {
         private DBContext db = new DBContext();
-
+        
         [AllowAnonymous]
         // GET: Products
         public ActionResult Index()
