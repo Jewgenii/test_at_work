@@ -341,6 +341,7 @@
     <Content Include="Views\Products\ProductList.cshtml" />
     <Content Include="Views\Home\Show.cshtml" />
     <Content Include="Views\Products\AutoCompleteNoJson.cshtml" />
+    <Content Include="Views\Products\Pagination.cshtml" />
     <None Include="Views\Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

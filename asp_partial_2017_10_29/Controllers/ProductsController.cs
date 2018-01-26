@@ -148,6 +148,46 @@ namespace asp_partial_2017_10_29.Controllers
             return str.ToString();
         }
 
+        [HttpGet]
+        [Route("{Pagination}/{currentPage/itemsToDisplay}")]
+        public ActionResult Pagination(int? currentPage, int? itemsToDisplay = 5)
+        {
+            int _itemsToDisplay = 5;
+
+            if (itemsToDisplay.Value <= 100)
+                _itemsToDisplay = itemsToDisplay.Value;
+
+            int _currentPage = 1;
+
+            if (currentPage.HasValue && currentPage.Value > 1)
+                _currentPage = currentPage.Value;
+
+                ViewBag.currentPage = _currentPage;
+                ViewBag.itemsToDisplay = _itemsToDisplay;
+
+                IEnumerable<Product> prods = db.Products
+                                                    .OrderBy(x => x.Name)
+                                                    .Skip(_itemsToDisplay * (_currentPage - 1))
+                                                    .Take(_itemsToDisplay)
+                                                    .ToArray();
+            int _last = prods.Count();
+            if (_last == 0)
+                return HttpNotFound();
+
+            var el = db.Products.OrderBy(x => x.Name)
+                                .Skip(_itemsToDisplay * _currentPage)
+                                .FirstOrDefault();
+            if (el != null)
+                ViewBag.pagesleft = 1;
+            else
+                ViewBag.pagesleft = 0;
+
+
+            return View(model: prods);
+        }
+
+
+
         protected override void Dispose(bool disposing)
         {
             if (disposing)

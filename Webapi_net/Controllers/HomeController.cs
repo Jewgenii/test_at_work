@@ -11,8 +11,7 @@ namespace Webapi_net.Controllers
         public ActionResult Index()
         {
             ViewBag.Title = "Home Page";
-
-
+            
             return View();
         }
     }

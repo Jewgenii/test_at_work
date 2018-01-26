@@ -1,0 +1,46 @@
+﻿@model IEnumerable<asp_partial_2017_10_29.Models.Product>
+@{
+    ViewBag.Title = "Pagination";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Table</h2>
+
+<p id="count" data-cout=@ViewBag.itemsToDisplay></p>
+
+<table>
+    <thead>
+        <tr>
+            <td>Info</td>
+            <td>Name</td>
+            <td>Price</td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Info </td>
+                <td>@item.Name </td>
+                <td>@item.Price </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<div>
+    @if (ViewBag.currentPage > 1)
+    {
+        @Html.ActionLink("First", "pagination", routeValues: new { currentPage = 0 }) ..
+    }
+
+    <h3>@ViewBag.currentPage</h3> ..
+
+    @if (ViewBag.pagesleft > 0)
+    {
+        for (int i = ViewBag.currentPage + 1; i <= ViewBag.currentPage + ViewBag.pagesleft; i++)
+        {
+            @Html.ActionLink(i.ToString(), "pagination", routeValues: new { currentPage = i }) ..
+        }
+    }
+</div>

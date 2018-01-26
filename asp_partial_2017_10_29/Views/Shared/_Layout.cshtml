@@ -25,6 +25,7 @@
                     <li>@Html.ActionLink("Домашняя страница", "Index", "Home")</li>
                     <li>@Html.ActionLink("О программе", "About", "Home")</li>
                     <li>@Html.ActionLink("Контакт", "Contact", "Home")</li>
+                    <li>@Html.ActionLink(linkText: "table",actionName: "Pagination",controllerName: "Products", routeValues: new { currentPage = 1, itemsToDisplay = 5 },htmlAttributes:null)</li>
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>
